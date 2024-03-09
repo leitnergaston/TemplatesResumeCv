@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: #353535;
+    --container-color: #343857;
+    --primary-color: #8f3985;
+    --text-color: #e9e9e9;
+    --subtitle-color: #ecc6b3;
+    --link-color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background-color: var(--body-color);
+}
+
+img {
+    width: 100%;
+}
+
+.hr {
+    grid-column: 1/-1;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-top: 2px solid var(--primary-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .hr {
+        margin: 0 auto;
+    }
+}
+
+.container {
+    max-width: 1000px;
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	padding: 5rem;
+	background: var(--container-color);
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }
+}
+
+.profile {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+}
+
+.group1,
+.group2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.group3 {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.group3>div {
+    flex: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .profile {
+        margin-bottom: 0;
+    }
+
+    .group3 {
+        flex-direction: column;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.itemLink {
+    color: var(--link-color);
+    text-decoration: underline;
+    transition: .2 ease;
+}
+
+.itemLink:hover {
+    color: var(--primary-color);
+}
+
+.linksContent a {
+    padding-right: 10px;
+}
+
+.description {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.titleContainer {
+    display: flex;
+	align-items: center;
+	justify-content: start;
+	color: var(--primary-color);
+}
+
+.titleContainer h3 {
+    padding-left: 5px;
+}
+
+.title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.itemPretitle {
+    font-size: 1.2rem;
+    color: #cfcfcf;
+    font-weight: 300;
+}
+
+.itemTitle {
+    font-size: 1.6rem;
+    color: var(--subtitle-color);
+    font-weight: 500;
+    margin: 0.8rem 0;
+}
+
+.itemSubtitle {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.profileContainer {
+    display: flex;
+    gap: 2rem;
+}
+
+.profileImg {
+    min-width: 250px;
+}
+
+.profileImg img {
+    border-radius: 50px;
+}
+
+.profileName_firstName {
+    color: white;
+	font-weight: 200;
+	font-size: clamp(2rem, 8vw, 4rem);
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: -0.8rem;
+}
+
+.profileName_lastName {
+    color: var(--primary-color);
+	font-weight: 700;
+	font-size: clamp(2.5rem, 15vw, 7rem);
+	text-transform: uppercase;
+	display: block;
+}
+
+.profileTitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--subtitle-color);
+}
+
+.profileDescription {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 768px) {
+    .profileContainer {
+        flex-direction: column;
+    }
+}
+
+/* SKILLS */
+.skillList {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+}
+
+.skillList li {
+    list-style: circle;
+}
+
+.skillList li:hover {
+    list-style: disc;
+}
+
+.skillItem {
+    margin-top: 2rem;
+}
+
+.skillName {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--subtitle-color);
+}
+
+.eduItem,
+.certificationItem,
+.expItem,
+.proyectosItem {
+    margin-top: 2rem;
+}
+
+.hobbieItems {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.hobbieItem {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+}
+
+.hobbieItem svg {
+    width: 2rem;
+}
+
+.socialItems {
+    margin-top: 2rem;
+}
+
+.socialItem {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--text-color);
+    transition: .2s ease;
+}
+
+.socialItem:hover {
+    color: var(--primary-color);
+}
+
+.socialItem svg {
+    width: 2rem;
+}
